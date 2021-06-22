@@ -6,9 +6,15 @@ describe('Sudoku', () => {
     expect(sudoku);
   });
   test ("should add 'column' and 'row' as parameters", () => {
-    const row = 9;
-    const column = 9;
+    const row = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const column = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let sudoku = new Sudoku(row, column);
+  });
+  test ("should create a Sudoku prototype to check rows", () => {
+    const row = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const column = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let sudoku = new Sudoku(row, column);
+    sudoku.checkRow();
   });
 });
 
